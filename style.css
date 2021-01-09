@@ -56,8 +56,9 @@ h1 {
 }
 
 .smaller button {
+    display: inline-block;
     padding: 10px;
-    width: 49%;
+    width: 33%;
     margin-top: 5px;
     border-radius: 8px;
     background-color: rgb(75, 253, 84);
@@ -67,7 +68,17 @@ h1 {
     color: rgb(255, 255, 255);
 }
 
+@media screen and (max-width: 600px) {
+    .smaller button {
+        width: 32%;
+    }
+}
+
 .smaller .btn2 {
+    background-color: rgb(225, 255, 89);
+}
+
+.smaller .btn3 {
     float: right;
     background-color: rgb(255, 89, 89);
 }
@@ -85,9 +96,11 @@ div.tasks li {
     border-radius: 5px;
     border: 1px solid rgba(255, 255, 255, 0.281);
     background-color: rgba(255, 255, 255, 0.342);
+    cursor: pointer;
 }
 
 div.tasks li input {
+    cursor: pointer;
     margin-right: 10px;
 }
 

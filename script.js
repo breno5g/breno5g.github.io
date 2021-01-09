@@ -13,10 +13,11 @@ function load() {
         let task = document.createElement("li")
         let checkbox = document.createElement("input");
 
+        task.setAttribute("onclick","lineThrough(this)");
         checkbox.setAttribute("type", "checkbox");
         checkbox.setAttribute("value",arrayList[item]);
         checkbox.setAttribute("name","items");
-        checkbox.setAttribute("onclick","lineThrough(this)");
+        checkbox.setAttribute("onclick","lineThrough(this.parentElement)");
         let text = document.createTextNode(`${parseInt(item) + 1} - ${arrayList[item]}`);
         task.appendChild(checkbox);
         task.appendChild(text);
@@ -40,7 +41,6 @@ function createTask() {
         load();
         document.getElementById("item").value = "";
     }
-    console.log(existentList.innerHTML)
 }
 
 function deleteTask() {
@@ -58,12 +58,22 @@ function deleteTask() {
     load();
 }
 
-function lineThrough(event) {
+function checked(event) {
     if(event.checked == true) {
-        event.parentElement.classList.add("lineThrough")
+        event.parentElement.classList.add("lineThrough");
     } else if ((event.checked == false)) {
-        event.parentElement.classList.remove("lineThrough")
+        event.parentElement.classList.remove("lineThrough");
     }
+}
 
-    console.log(event.parentElement)
+function lineThrough(event) {
+    let checkbox = event.children[0]
+    checkbox.checked != true ? checkbox.checked = true : checkbox.checked = false
+
+    checked(checkbox)
+}
+
+function clearList() {
+    localStorage.clear();
+    load()
 }
