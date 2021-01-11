@@ -1,260 +1,114 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
-* { 
-    border: none;
+
+* {
+    list-style: none;
     margin: 0;
     padding: 0;
-    text-decoration: none;
+    border: 0;
+    
     font-family: "Roboto", sans-serif;
-    list-style: none;
-    scroll-margin: none;
-    cursor: default;
+    box-sizing: border-box;
+
+    text-shadow: 1px 1px 1px #0000005d;
 }
-
-a:visited {
-    color: white
-}
-
-a:active {
-    color: white;
-}
-
-/* =-=-=-=-= Body =-=-=-=-= */
-
-body {
-    height: 100%;
-    overflow: hidden;
-}
-
-/* =-=-=-=-= Centralize =-=-=-=-= */
-
-.smaller {
-    width: 60%;
-    margin: 0 auto;
-}
-
-/* =-=-=-=-= Background =-=-=-=-= */
 
 div.background {
     width: 100%;
     height: 100vh;
-    border-radius: 0 0 18px 18px;
-    background: linear-gradient(30deg, rgba(120, 255, 181, 0.8), rgba(0,0,0,0) 70.71%),
-                linear-gradient(150deg,rgba(245, 66, 170, 0.8), rgba(0,0,0,0) 70.71%),
-                linear-gradient(270deg, rgba(242, 255, 62, 0.8), rgba(0,0,0,0) 70.71%),
-                linear-gradient(359deg, rgba(22, 76, 252, 0.8), rgba(0,0,0,0) 70.71%);
+    background: linear-gradient(30deg, rgba(120, 201, 255, 0.8), rgba(0,0,0,0) 70.71%),
+                linear-gradient(150deg,rgba(255, 120, 199, 0.8), rgba(0,0,0,0) 70.71%),
+                linear-gradient(270deg, rgba(62, 255, 175, 0.8), rgba(0,0,0,0) 70.71%);
 }
 
-/* =-=-=-=-= Header =-=-=-=-= */
+.smaller {
+    width: 75%;
+    margin: 0 auto;
+    padding: 32px;
 
-header {
-    padding: 30px 0;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    cursor: default;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.smaller input[type=text] {
+    width: 100%;
+    height: 24px;
+    padding: 22px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.342);
+    border: 1px solid rgba(255, 255, 255, 0.281);
     
 }
 
-header h1 {
-    display: inline-block;
-}
-
-header h2 { 
-    float: right;
-    font-size: 22px;
-    font-weight: 500;
-    transform: translateY(8px);
-}
-
-/* =-=-=-=-= Card =-=-=-=-= */
-
-section.card {
-    height: 80vh;
-    /* background-color: #FFFFFF; */
-    border-radius: 16px;
-    box-shadow: 0 8px 24px 8px  rgba(35, 35, 41, 0.1);
-
-}
-
-/* =-=-=-=-= Left Side =-=-=-=-= */
-
-
-section.leftSide {
-    box-sizing: border-box;
-    padding: 10px;
-    width: 40%;
-    height: 100%;
-    border-radius: 16px;
-    /* border-radius: 16px 0 0 16px; */
-    background-color: rgb(255, 255, 255);
-}
-
-
-/* =-=-=-=-= Image =-=-=-=-= */
-
-section.image div img {
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
-    border-radius: 50px;
-    border: 1px solid rgba(170, 170, 170, 0.123);
-}
-
-section.image img {
-    object-fit: cover;
-    width: 100%;
-    display: inline-block;
-} 
-
-/* =-=-=-=-= Image Text =-=-=-=-= */
-
-section.image .text {
-    display: inline-block;
-    transform: translate(85%, -120%); 
-}
-
-section.image h1 {
-    color: #232329;
-    font-size: 35px;
-    text-transform: uppercase;
-    line-height: 33px;
-}
-
-/* =-=-=-=-= Image border bottom =-=-=-=-= */
-
-section.image {
-    padding-top: 20px;
-    border-bottom: 1px solid  rgb(189, 189, 189);
-    height: 25%;
-}
-
-/* =-=-=-=-= Job =-=-=-=-= */
-
-section.leftSide h2 {
-    color: #232329;
-    padding: 10px 0;
-    font-size: 25px;
-    font-weight: 400;
-    border-bottom: 1px solid rgb(189, 189, 189);
-}
-
-/* =-=-=-=-= Description =-=-=-=-= */
-
-section.leftSide p {
-    padding-top: 10%;
-    font-size: 20px;
-    line-height: 30px;
-    color: #313131;
-}
-
-/* =-=-=-=-= Right Side  =-=-=-=-=*/
-
-section.rightSide {
-    width: 59%;
-    height: 100%;
-    float: right;
-    transform: translate(0, -100%);
-    border-radius: 0 16px 16px 0;
-    /* background-color: rgb(199, 116, 15); */
-}
-
-
-/* =-=-=-=-= Right Side top align =-=-=-=-=*/
-
-section.rightSide .top{
-    background-color: rgb(255, 255, 255);
-    height: 58%;
-    border-radius: 16px;
-    /* border-radius: 0 16px 0 0; */
-    padding: 25px;
-    box-sizing: border-box;
-}
-
-div.content {
-    text-align: center;
-}
-
-div.content ul {
-    margin-left: 18%;
-    text-align: left;
-}
-
-/* =-=-=-=-= Right Side Top title =-=-=-=-= */
-
-section.rightSide h1{
-    text-transform: uppercase;
-    font-size: 35px;
-    margin-top: 30px;
-}
-
-/* =-=-=-=-= Skills =-=-=-=-= */
-
-section.rightSide ul {
-    padding-top: 30px;
-}
-
-section.rightSide li {
-    color: #313131;
-    font-size: 25px;
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-
-section.rightSide img {
-    width: 6%;
-}
-
-section.rightSide img.skillHtml {
-    transform: translate(75px, 2px);
-}
-
-section.rightSide img.skillCss {
-    transform: translate(125px, 2px);
-}
-
-section.rightSide img.skillJs {
-    transform: translate(54px, 2px)
-}
-
-/* =-=-=-=-= Right side bottom =-=-=-=-= */
-
-section.bottom {
-    box-sizing: border-box;
-    background-color: rgb(255, 255, 255);
-    height: 40%;
-    padding: 15px;
-    border-radius: 16px;
-    /* border-radius: 0 0 16px 0; */
-    transform: translateY(5%);
-}
-
-section.rightSide .bottom h1{
-    color: #232329;
-    transform: translateY(-55%);
-}
-
-section.rightSide .bottom button{
-    box-sizing: border-box;
-    float: left;
-    margin-left: 15px;
-    cursor: pointer;
+.smaller input:focus {
     outline: none;
-    width: 20%;
-    padding: 10px 0;
-    transform: translateX(73%);
-    border-radius: 10px;
-    box-shadow: 0 8px 24px 8px  rgba(35, 35, 41, 0.1);     
-    background-color: #e2e2e2f3;    
 }
 
-button:hover {
-    background: linear-gradient(30deg, rgba(120, 255, 181, 0.8), rgba(0,0,0,0) 50%),
-                linear-gradient(150deg,rgba(245, 66, 170, 0.8), rgba(0,0,0,0) 50%),
-                linear-gradient(270deg, rgba(242, 255, 62, 0.8), rgba(0,0,0,0) 50%),
-                linear-gradient(359deg, rgba(22, 76, 252, 0.8), rgba(0,0,0,0) 50%);
+.smaller input::placeholder {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #0000005d;
 }
 
-section.rightSide .bottom button img {
-    width: 50%;
+.smaller button {
+    display: inline-block;
+    padding: 10px;
+    width: 33%;
+    margin-top: 5px;
+    border-radius: 8px;
+    background-color: rgb(75, 253, 84);
+    border: 1px solid rgba(255, 255, 255, 0.281);
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 600px) {
+    .smaller button {
+        width: 32%;
+    }
+}
+
+.smaller .btn2 {
+    background-color: rgb(225, 255, 89);
+}
+
+.smaller .btn3 {
+    float: right;
+    background-color: rgb(255, 89, 89);
+}
+
+div.tasks {
+    padding-top: 10px;
+}
+
+div.tasks li {
+    font-weight: bold;
+    padding: 5px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.281);
+    background-color: rgba(255, 255, 255, 0.342);
     cursor: pointer;
+}
+
+div.tasks li input {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+div.tasks li input:checked li{
+    text-decoration: line-through;
+}
+
+.lineThrough {
+    text-decoration: line-through rgba(0, 0, 0, 0.548);
+    text-shadow: none;
 }
