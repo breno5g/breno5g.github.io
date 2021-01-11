@@ -293,14 +293,22 @@ section.rightSide .bottom button img {
     section.rightSide .bottom{
         width: 100%;
         transform: translate(-50%, 190%);
+        background-color:rgba(255, 255, 255, 0);
     }
 
     section.rightSide .bottom h1{
         display: none;
     }
     section.rightSide .bottom button{
+        box-sizing: border-box;
         margin-left: 30px;
+        cursor: pointer;
+        outline: none;
         width: 20%;
+        padding: 10px 0;
+        border-radius: 10px;
+        box-shadow: 0 8px 24px 8px  rgba(35, 35, 41, 0.1);     
+        background-color: #e2e2e2f3;    
     }
 
     section.rightSide .bottom button img {
@@ -337,7 +345,7 @@ section.rightSide .bottom button img {
     section.rightSide .bottom{
         width: 100%;
         transform: translate(-50%, 211%);
-
+        background-color:rgba(255, 255, 255, 0);
     }
 
     section.rightSide .bottom h1{
@@ -345,8 +353,15 @@ section.rightSide .bottom button img {
     }
 
     section.rightSide .bottom button{
+        box-sizing: border-box;
         margin-left: 20px;
-        width: 20%;   
+        cursor: pointer;
+        outline: none;
+        width: 20%;
+        padding: 10px 0;
+        border-radius: 10px;
+        box-shadow: 0 8px 24px 8px  rgba(35, 35, 41, 0.1);     
+        background-color: #e2e2e2f3;    
     }
 
     section.rightSide .bottom button img {
