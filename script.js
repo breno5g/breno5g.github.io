@@ -68,12 +68,12 @@ function checked(event) {
 
 function lineThrough(event) {
     let checkbox = event.children[0]
-    checkbox.checked != true ? checkbox.checked = true : checkbox.checked = false
+    checkbox.checked != true ? checkbox.checked = true : checkbox.checked = false;
 
-    checked(checkbox)
+    checked(checkbox);
 }
 
 function clearList() {
     localStorage.clear();
-    load()
+    load();
 }
