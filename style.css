@@ -1,114 +1,311 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
 
 * {
-    list-style: none;
-    margin: 0;
     padding: 0;
-    border: 0;
-    
-    font-family: "Roboto", sans-serif;
+    margin: 0;
     box-sizing: border-box;
-
-    text-shadow: 1px 1px 1px #0000005d;
+    font-family: 'Josefin Sans', sans-serif;
+    transition: all 0.5s;
 }
 
-div.background {
-    width: 100%;
+:root {
+    --bg: #161722;
+    --cardbg: #25273c;
+    --text: #cacde8;
+    --texthover: #e4e5f1;
+    --lighttext: #777a92;
+    --semilighttext: #4d5066;
+    --darktext: #393a4c;
+}
+
+body {
     height: 100vh;
-    background: linear-gradient(30deg, rgba(120, 201, 255, 0.8), rgba(0,0,0,0) 70.71%),
-                linear-gradient(150deg,rgba(255, 120, 199, 0.8), rgba(0,0,0,0) 70.71%),
-                linear-gradient(270deg, rgba(62, 255, 175, 0.8), rgba(0,0,0,0) 70.71%);
+    display: flex;
+    background-color: var(--bg);
+    align-items: center;
+    justify-content: center;
 }
 
-.smaller {
-    width: 75%;
-    margin: 0 auto;
-    padding: 32px;
-
+.bg {
+    width: 100vw;
+    height: 300px;
+    position: absolute;
+    background-image: url(assets/images/bg-desktop-dark.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    z-index: -1;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 10px;
-    color: rgb(255, 255, 255);
+/* =-=-=-= Accessibility =-=-=-= */
+button span {
+    position: absolute;
+    opacity: 0;
+    left: -200vw;
 }
 
-.smaller input[type=text] {
+/* =-=-=-= Header =-=-=-= */
+
+.todoApp {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.todoApp header {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todoApp header h1 {
+    color: var(--texthover);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+.todoApp header button {
+    border: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* =-=-=-= Create new todo =-=-=-= */
+
+.todoApp .createNew {
     width: 100%;
-    height: 24px;
-    padding: 22px;
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.342);
-    border: 1px solid rgba(255, 255, 255, 0.281);
-    
+    min-height: 50px;
+    background-color: var(--cardbg);
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    border-radius: 5px;
 }
 
-.smaller input:focus {
+.todoApp .createNew .left-side{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todoApp .createNew .left-side button{
+    width: 25px;
+    height: 25px;
+    background: var(--semilighttext);
+    border-radius: 50%;
+    border: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.todoApp .createNew .left-side button::after {
+    content: "+";
+    width: 23px;
+    height: 23px;
+    background-color: var(--cardbg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: var(--lighttext);
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    border-radius: 50%;
+}
+
+.todoApp .createNew .left-side button:hover {
+    background: linear-gradient(90deg, rgba(87,221,255,1) 0%, rgba(192,88,243,1) 100%);
+}
+
+.todoApp .createNew .right-side input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    padding-left: 10px;
+    color: var(--text);
     outline: none;
-}
-
-.smaller input::placeholder {
     font-size: 16px;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    text-shadow: 1px 1px 1px #0000005d;
 }
 
-.smaller button {
-    display: inline-block;
-    padding: 10px;
-    width: 33%;
-    margin-top: 5px;
-    border-radius: 8px;
-    background-color: rgb(75, 253, 84);
-    border: 1px solid rgba(255, 255, 255, 0.281);
-    font-weight: bold;
+/* =-=-=-= todo table =-=-=-= */
+.todoApp .container {
+    border-radius: 5px;
+    background-color: var(--cardbg);
+}
+
+.todoApp .container .todo {
+    width: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    border-bottom: 1px solid var(--darktext);
+}
+
+.todoApp .container .todo .left-side{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todoApp .container .todo .left-side input{
+    opacity: 0;
+    height: 0;
+    width: 0;
+    display: none;
+}
+
+.todoApp .container .todo .left-side label {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.todoApp .container .todo .left-side input:checked ~ label {
+    background: linear-gradient(90deg, rgba(87,221,255,1) 0%, rgba(192,88,243,1) 100%);
+}
+
+.todoApp .container .todo .left-side input:not(:checked) ~ label {
+    background-color: var(--lighttext);
+}
+
+.todoApp .container .todo .left-side label:hover {
+    background: linear-gradient(90deg, rgba(87,221,255,1) 0%, rgba(192,88,243,1) 100%);
+}
+
+.todoApp .container .todo .left-side input:not(:checked) ~ label::after {
+    content: "";
+    width: 23px;
+    height: 23px;
+    background-color: var(--cardbg);
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    border-radius: 50%;
+}
+
+.todoApp .container .todo .left-side input:checked ~ label::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-image: url(assets/images/icon-check.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    color: white;
+}
+
+.todoApp .container .todo .center {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    color: var(--lighttext);
     font-size: 18px;
-    color: rgb(255, 255, 255);
+}
+
+.todoApp .container .todo .center span {
+    cursor: pointer;
+}
+
+.todoApp .container .todo .right-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todoApp .container .todo .right-side button {
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border: none;
+    background-image: url(assets/images/icon-cross.svg);
+    background-size: cover;
+    cursor: pointer;
+}
+
+.todoApp .container .todo .center span:hover,
+.todoApp .container .todo .right-side button:hover {
+    filter: brightness(150%);
+}
+
+/* =-=-=-= Filters bar =-=-=-= */
+
+.todoApp .bottomBar {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: var(--cardbg);
+    border-radius: 5px;
+    position: relative;
+}
+
+.todoApp .bottomBar .counter {
+    color: var(--semilighttext);
+    font-size: 12px;
+}
+
+.todoApp .bottomBar button {
+    border: none;
+    background-color: transparent;
+    color: var(--lighttext);
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.todoApp .bottomBar button:hover {
+    filter: brightness(150%);
+}
+
+.todoApp .bottomBar .filters {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.todoApp .bottomBar .filters button:first-child {
+    color: #3a7bfd;
+}
+
+.todoApp .bottomBar .clear button {
+    color: var(--darktext);
 }
 
 @media screen and (max-width: 600px) {
-    .smaller button {
-        width: 32%;
+    .todoApp {
+        width: 90%;
     }
-}
 
-.smaller .btn2 {
-    background-color: rgb(225, 255, 89);
-}
+    .todoApp .bottomBar .filters {
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 60px;
+        gap: 30px;
+        width: 100%;
+        background-color: var(--cardbg);
+        padding: 15px 0;
+        border-radius: 5px;
+    }
 
-.smaller .btn3 {
-    float: right;
-    background-color: rgb(255, 89, 89);
-}
-
-div.tasks {
-    padding-top: 10px;
-}
-
-div.tasks li {
-    font-weight: bold;
-    padding: 5px;
-    width: 100%;
-    color: rgb(255, 255, 255);
-    margin-bottom: 5px;
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.281);
-    background-color: rgba(255, 255, 255, 0.342);
-    cursor: pointer;
-}
-
-div.tasks li input {
-    cursor: pointer;
-    margin-right: 10px;
-}
-
-div.tasks li input:checked li{
-    text-decoration: line-through;
-}
-
-.lineThrough {
-    text-decoration: line-through rgba(0, 0, 0, 0.548);
-    text-shadow: none;
+    .todoApp .bottomBar .filters button {
+        font-size: 15px;
+    }
 }

@@ -1,25 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task list</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <meta name="description" content="description to gain points in SEO">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Todo app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
 </head>
 <body>
-    <div class="background">
-        <div class="smaller">
-            <h1>To-do List</h1>
-            <input id="item" type="text" placeholder="Write the task">
-            <button class="btn1" onclick="createTask()">Create</button>
-            <button class="btn2" onclick="deleteTask()">Delete</button>
-            <button class="btn3" onclick="clearList()">Clear</button>
-            <div class="tasks">
-                <ul id="list">
-                </ul>
-            </div>
-        </div>
-        <script src="script.js"></script>
+  <div class="bg"></div>
+  <section class="todoApp">
+    <header>
+      <h1>
+        Todo
+      </h1>
+      <button theme="dark" onclick="changeTheme(this)"><img src="assets/images/icon-sun.svg" alt="Turn to light mode"></button>
+    </header>
+    <div class="createNew">
+      <div class="left-side">
+        <button onclick="createNewTodo(this)"><span>Create task button</span></button>
+      </div>
+      <div class="right-side">
+        <input id="createTaskInput"  type="text" placeholder="Create a new todo...">
+      </div>
     </div>
+    <div class="container">
+      <div class="todos">
+        <!-- <div class="todo">
+          <div class="left-side">
+            <input type="checkbox" name="check">
+            <label for="check" onclick="check(this)"></label>
+          </div>
+          <div class="right-side">
+            <span>Brownie</span>
+          </div>
+        </div>
+        <div class="todo">
+          <div class="left-side">
+            <input type="checkbox" name="check">
+            <label for="check" onclick="check(this)"></label>
+          </div>
+          <div class="right-side">
+            <span>Brownie</span>
+          </div>
+        </div>
+        <div class="todo">
+          <div class="left-side">
+            <input type="checkbox" name="check">
+            <label for="check" onclick="check(this)"></label>
+          </div>
+          <div class="right-side">
+            <span>Brownie</span>
+          </div>
+        </div>
+        <div class="todo">
+          <div class="left-side">
+            <input type="checkbox" name="check">
+            <label for="check" onclick="check(this)"></label>
+          </div>
+          <div class="right-side">
+            <span>Brownie</span>
+          </div> -->
+      </div>
+      <div class="bottomBar">
+        <div class="counter">
+          <span>0 items left</span>
+        </div>
+        <div class="filters">
+          <button id="all" onclick="sortAll()">All</button>
+          <button id="active" onclick="sortActive()">Active</button>
+          <button id="completed" onclick="sortCompleted()">Completed</button>
+        </div>
+        <div class="clear">
+          <button onclick="clearCompleted()">Clear Completed</button>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Drag and drop to reorder list
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/breno5g">Breno Santos</a>.
+  </div> -->
+
+  <script src="script.js"></script>
 </body>
 </html>
