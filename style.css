@@ -1,413 +1,551 @@
-@import url("https://fonts.googleapis.com/css2?family=Nova+Round&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nova+Round&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
-    scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: #f5f5f5;
-    overflow-x: hidden;
+  background-color: #f5f5f5;
+  overflow-x: hidden;
 }
 
 /* header */
 
 #header-menu {
-    width: 100vw;
-    padding: 30px 100px;
-    display: grid;
-    place-items: center;
-    position: absolute;
-    top: 0;
+  width: 100vw;
+  padding: 30px 100px;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 0;
 }
 
 #header-menu nav {
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #header-menu nav h1 a {
-    font-family: "Nova Round", cursive;
-    font-size: 32px;
-    color: #f5f5f5;
-    letter-spacing: 2px;
-    cursor: pointer;
-    text-decoration: none;
+  font-family: 'Nova Round', cursive;
+  font-size: 32px;
+  color: #f5f5f5;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 #header-menu nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
 }
 
 #header-menu nav ul li a {
-    font-size: 22px;
-    font-weight: 600;
-    color: #f5f5f5;
-    text-decoration: none;
-    display: block;
-    padding: 10px 5px;
-    position: relative;
+  font-size: 22px;
+  font-weight: 600;
+  color: #f5f5f5;
+  text-decoration: none;
+  display: block;
+  padding: 10px 5px;
+  position: relative;
 }
 
 #header-menu nav ul li a::before {
-    content: "";
-    width: 100%;
-    height: 3px;
-    background-color: #f5f5f5;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    transform: rotateY(90deg);
-    transition: all 0.3s ease-in-out;
+  content: '';
+  width: 100%;
+  height: 3px;
+  background-color: #f5f5f5;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: rotateY(90deg);
+  transition: all 0.3s ease-in-out;
 }
 
 #header-menu nav ul li a:hover::before {
-    transform: rotateY(0deg);
+  transform: rotateY(0deg);
 }
 
 /* Main banner */
 
 #main {
-    height: 100vh;
-    padding: 0 95px;
-    background-image: url(./assets/wallpapersden.com_landscape-pixel-art_1920x1080.jpg);
-    background-size: cover;
-    display: flex;
-    align-items: center;
+  height: 100vh;
+  padding: 0 95px;
+  background-image: url(./assets/wallpapersden.com_landscape-pixel-art_1920x1080.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
 }
 
 #main h1 {
-    font-size: 70px;
-    color: #f5f5f5;
-    width: 570px;
-    padding: 20px;
-    font-weight: 300;
-    border: 2px solid #f5f5f5;
-    text-shadow: 2px 2px #11111150;
-    letter-spacing: 2px;
+  font-size: 70px;
+  color: #f5f5f5;
+  width: 570px;
+  padding: 20px;
+  font-weight: 300;
+  border: 2px solid #f5f5f5;
+  text-shadow: 2px 2px #11111150;
+  letter-spacing: 2px;
 }
 
 /* About */
 
 #about {
-    height: 100vh;
-    padding: 50px 100px;
+  height: 100vh;
+  padding: 50px 100px;
 }
 
 #about h1 {
-    font-size: 38px;
-    margin-bottom: 20px;
-    font-weight: 300;
+  font-size: 38px;
+  margin-bottom: 20px;
+  font-weight: 300;
 }
 
 #about .content {
-    display: flex;
-    justify-content: space-between;
-    border-radius: 10px;
-    gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  gap: 20px;
 }
 
 #about .content img {
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
 #about .about-text {
-    padding: 0 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #about .about-text h1 {
-    font-size: 52px;
-    font-weight: 300;
-    margin-bottom: 0;
+  font-size: 52px;
+  font-weight: 300;
+  margin-bottom: 0;
 }
 
 #about .about-text span {
-    font-size: 24px;
-    color: #11111180;
+  font-size: 24px;
+  color: #11111180;
 }
 
 #about .about-text p {
-    font-size: 24px;
-    line-height: 35px;
+  font-size: 24px;
+  line-height: 35px;
 }
 
 /* Hobbies */
 
 #hobbies {
-    height: 100vh;
-    padding: 50px 100px;
+  height: 100vh;
+  padding: 50px 100px;
 }
 
 #hobbies header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 #hobbies header h1 {
-    font-size: 32px;
-    font-weight: 400;
-    letter-spacing: 5px;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 5px;
 }
 
 #hobbies header button {
-    padding: 10px 20px;
-    letter-spacing: 5px;
-    font-size: 22px;
-    font-weight: 400;
-    border-radius: 5px;
-    background-color: transparent;
-    border: 2px solid #111;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
+  padding: 10px 20px;
+  letter-spacing: 5px;
+  font-size: 22px;
+  font-weight: 400;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 2px solid #111;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 #hobbies header button::before {
-    content: "";
-    width: 200%;
-    height: 120px;
-    background-color: #111;
-    position: absolute;
-    left: -50%;
-    top: -10px;
-    border-radius: 50%;
-    transform: rotateX(90deg);
-    transition: all 0.3s ease-in-out;
+  content: '';
+  width: 200%;
+  height: 120px;
+  background-color: #111;
+  position: absolute;
+  left: -50%;
+  top: -10px;
+  border-radius: 50%;
+  transform: rotateX(90deg);
+  transition: all 0.3s ease-in-out;
 }
 
 #hobbies header button:hover::before {
-    transform: rotateX(0);
+  transform: rotateX(0);
 }
 
 #hobbies header button:after {
-    content: "Ver tudo";
-    width: 150px;
-    letter-spacing: 5px;
-    font-size: 22px;
-    font-weight: 400;
-    position: absolute;
-    margin: auto;
-    left: 6px;
-    color: #f5f5f5;
-    opacity: 0%;
-    transition: all 0.3s ease-in-out;
+  content: 'Ver tudo';
+  width: 150px;
+  letter-spacing: 5px;
+  font-size: 22px;
+  font-weight: 400;
+  position: absolute;
+  margin: auto;
+  left: 6px;
+  color: #f5f5f5;
+  opacity: 0%;
+  transition: all 0.3s ease-in-out;
 }
 
 #hobbies header button:hover::after {
-    opacity: 100%;
+  opacity: 100%;
 }
 
 #hobbies .cards {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 #hobbies .cards .card {
-    padding: 20px;
-    width: 250px;
-    height: 400px;
-    background-color: tomato;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    border-radius: 5px;
-    filter: grayscale(80%);
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
+  padding: 20px;
+  width: 250px;
+  height: 400px;
+  background-color: tomato;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 5px;
+  filter: grayscale(80%);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 #hobbies .cards .card:nth-child(1) {
-    background: url(./assets/c9e3b988e19c206d6118335499d8c197.jpg);
-    background-size: cover;
+  background: url(./assets/c9e3b988e19c206d6118335499d8c197.jpg);
+  background-size: cover;
 }
 #hobbies .cards .card:nth-child(2) {
-    background: url(./assets/3748fc37408772fa9abe92bba5a7c1d6.jpg);
-    background-size: cover;
+  background: url(./assets/3748fc37408772fa9abe92bba5a7c1d6.jpg);
+  background-size: cover;
 }
 #hobbies .cards .card:nth-child(3) {
-    background: url(./assets/dae191f16d34dd4bae7012f92efb67d8.jpg);
-    background-size: cover;
+  background: url(./assets/dae191f16d34dd4bae7012f92efb67d8.jpg);
+  background-size: cover;
 }
 #hobbies .cards .card:nth-child(4) {
-    background: url(./assets/download.jpeg);
-    background-size: cover;
+  background: url(./assets/download.jpeg);
+  background-size: cover;
 }
 
 #hobbies .cards .card span {
-    font-size: 25px;
-    letter-spacing: 5px;
-    color: #f5f5f5;
-    text-shadow: 1px 1px #111;
-    z-index: 10;
-    transition: all 0.1s ease-in-out;
+  font-size: 25px;
+  letter-spacing: 5px;
+  color: #f5f5f5;
+  text-shadow: 1px 1px #111;
+  z-index: 10;
+  transition: all 0.1s ease-in-out;
 }
 
 #hobbies .cards .card::after {
-    content: "";
-    width: inherit;
-    height: inherit;
-    background-color: #f5f5f590;
-    position: absolute;
-    margin: auto;
-    bottom: -100%;
-    transition: all 0.3s ease-in-out;
+  content: '';
+  width: inherit;
+  height: inherit;
+  background-color: #f5f5f590;
+  position: absolute;
+  margin: auto;
+  bottom: -100%;
+  transition: all 0.3s ease-in-out;
 }
 
 #hobbies .cards .card:hover::after {
-    bottom: 0px;
+  bottom: 0px;
 }
 
 #hobbies .cards .card:hover span {
-    color: #111;
-    text-shadow: 1px 1px #f5f5f5;
+  color: #111;
+  text-shadow: 1px 1px #f5f5f5;
 }
 
 /* Skills */
 
 #skills {
-    height: 100vh;
-    padding: 50px 100px;
+  height: 100vh;
+  padding: 50px 100px;
 }
 
 #skills header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 #skills header h1 {
-    font-size: 32px;
-    font-weight: 400;
-    letter-spacing: 5px;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 5px;
 }
 
 #skills header button {
-    padding: 10px 20px;
-    letter-spacing: 5px;
-    font-size: 22px;
-    font-weight: 400;
-    border-radius: 5px;
-    background-color: transparent;
-    border: 2px solid #111;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
+  padding: 10px 20px;
+  letter-spacing: 5px;
+  font-size: 22px;
+  font-weight: 400;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 2px solid #111;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 #skills header button::before {
-    content: "";
-    width: 200%;
-    height: 120px;
-    background-color: #111;
-    position: absolute;
-    left: -50%;
-    top: -10px;
-    border-radius: 50%;
-    transform: rotateX(90deg);
-    transition: all 0.3s ease-in-out;
+  content: '';
+  width: 200%;
+  height: 120px;
+  background-color: #111;
+  position: absolute;
+  left: -50%;
+  top: -10px;
+  border-radius: 50%;
+  transform: rotateX(90deg);
+  transition: all 0.3s ease-in-out;
 }
 
 #skills header button:hover::before {
-    transform: rotateX(0);
+  transform: rotateX(0);
 }
 
 #skills header button:after {
-    content: "Ver tudo";
-    width: 150px;
-    letter-spacing: 5px;
-    font-size: 22px;
-    font-weight: 400;
-    position: absolute;
-    margin: auto;
-    left: 6px;
-    color: #f5f5f5;
-    opacity: 0%;
-    transition: all 0.3s ease-in-out;
+  content: 'Ver tudo';
+  width: 150px;
+  letter-spacing: 5px;
+  font-size: 22px;
+  font-weight: 400;
+  position: absolute;
+  margin: auto;
+  left: 6px;
+  color: #f5f5f5;
+  opacity: 0%;
+  transition: all 0.3s ease-in-out;
 }
 
 #skills header button:hover::after {
-    opacity: 100%;
+  opacity: 100%;
 }
 
 #skills .cards {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 #skills .cards .card {
-    padding: 20px;
-    width: 250px;
-    height: 400px;
-    background-color: tomato;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    border-radius: 5px;
-    filter: grayscale(80%);
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
+  padding: 20px;
+  width: 250px;
+  height: 400px;
+  background-color: tomato;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 5px;
+  filter: grayscale(80%);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 #skills .cards .card:nth-child(1) {
-    background: url(./assets/Screenshot\ from\ 2021-10-01\ 10-48-56.png);
-    background-size: cover;
+  background: url(./assets/Screenshot\ from\ 2021-10-01\ 10-48-56.png);
+  background-size: cover;
 }
 #skills .cards .card:nth-child(2) {
-    background: url(./assets/Screenshot\ from\ 2021-10-01\ 10-49-22.png);
-    background-size: cover;
+  background: url(./assets/Screenshot\ from\ 2021-10-01\ 10-49-22.png);
+  background-size: cover;
 }
 #skills .cards .card:nth-child(3) {
-    background: url(./assets/1555172.jpg);
-    background-size: cover;
-    background-position: center;
+  background: url(./assets/1555172.jpg);
+  background-size: cover;
+  background-position: center;
 }
 #skills .cards .card:nth-child(4) {
-    background: url(./assets/wp2448648.jpg);
-    background-size: cover;
-    background-position: center;
+  background: url(./assets/wp2448648.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 #skills .cards .card span {
-    font-size: 25px;
-    letter-spacing: 5px;
-    color: #f5f5f5;
-    text-shadow: 1px 1px #111;
-    z-index: 10;
-    transition: all 0.1s ease-in-out;
+  font-size: 25px;
+  letter-spacing: 5px;
+  color: #f5f5f5;
+  text-shadow: 1px 1px #111;
+  z-index: 10;
+  transition: all 0.1s ease-in-out;
 }
 
 #skills .cards .card::after {
-    content: "";
-    width: inherit;
-    height: inherit;
-    background-color: #f5f5f590;
-    position: absolute;
-    margin: auto;
-    bottom: -100%;
-    transition: all 0.3s ease-in-out;
+  content: '';
+  width: inherit;
+  height: inherit;
+  background-color: #f5f5f590;
+  position: absolute;
+  margin: auto;
+  bottom: -100%;
+  transition: all 0.3s ease-in-out;
 }
 
 #skills .cards .card:hover::after {
-    bottom: 0px;
+  bottom: 0px;
 }
 
 #skills .cards .card:hover span {
-    color: #111;
-    text-shadow: 1px 1px #f5f5f5;
+  color: #111;
+  text-shadow: 1px 1px #f5f5f5;
+}
+
+/* Projects */
+
+#projects {
+  height: 100vh;
+  padding: 50px 100px;
+}
+
+#projects header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+#projects header h1 {
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 5px;
+}
+
+#projects header button {
+  padding: 10px 20px;
+  letter-spacing: 5px;
+  font-size: 22px;
+  font-weight: 400;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 2px solid #111;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#projects header button::before {
+  content: '';
+  width: 200%;
+  height: 120px;
+  background-color: #111;
+  position: absolute;
+  left: -50%;
+  top: -10px;
+  border-radius: 50%;
+  transform: rotateX(90deg);
+  transition: all 0.3s ease-in-out;
+}
+
+#projects header button:hover::before {
+  transform: rotateX(0);
+}
+
+#projects header button:after {
+  content: 'Ver tudo';
+  width: 150px;
+  letter-spacing: 5px;
+  font-size: 22px;
+  font-weight: 400;
+  position: absolute;
+  margin: auto;
+  left: 6px;
+  color: #f5f5f5;
+  opacity: 0%;
+  transition: all 0.3s ease-in-out;
+}
+
+#projects header button:hover::after {
+  opacity: 100%;
+}
+
+#projects .cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+#projects .cards .card {
+  padding: 20px;
+  width: 250px;
+  height: 400px;
+  background-color: tomato;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 5px;
+  filter: grayscale(80%);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 2px 2px #11111150;
+  border: 1px solid #11111150;
+}
+
+#projects .cards .card:nth-child(1) {
+  background: url(./assets/pixel\ art.png);
+  background-size: cover;
+}
+#projects .cards .card:nth-child(2) {
+  background: url(./assets/todo.png);
+  background-size: cover;
+  background-position: center;
+}
+#projects .cards .card:nth-child(3) {
+  background: url(./assets/color\ guess.png);
+  background-size: cover;
+  background-position: center;
+}
+#projects .cards .card:nth-child(4) {
+  background: url(./assets/mistery.png);
+  background-size: cover;
+  background-position: center;
+}
+
+#projects .cards .card span {
+  font-size: 25px;
+  letter-spacing: 5px;
+  color: #f5f5f5;
+  text-shadow: 1px 1px #111;
+  z-index: 10;
+  transition: all 0.1s ease-in-out;
+}
+
+#projects .cards .card::after {
+  content: '';
+  width: inherit;
+  height: inherit;
+  background-color: #f5f5f590;
+  position: absolute;
+  margin: auto;
+  bottom: -100%;
+  transition: all 0.3s ease-in-out;
+}
+
+#projects .cards .card:hover::after {
+  bottom: 0px;
+}
+
+#projects .cards .card:hover span {
+  color: #111;
+  text-shadow: 1px 1px #f5f5f5;
 }

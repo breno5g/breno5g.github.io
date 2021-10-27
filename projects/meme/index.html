@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Meme Generator</title>
+  </head>
+  <body>
+    <div class="meme-generator">
+      <header>
+        <h1>Meme Generator</h1>
+      </header>
+      <section class="input-container">
+        <div class="div text-input-container">
+          <input type="text" id="text-input" maxlength="60" />
+        </div>
+        <input
+          type="file"
+          accept="image/*"
+          name="image-input"
+          id="meme-insert"
+        />
+      </section>
+      <section id="meme-image-container">
+        <p id="meme-text"></p>
+        <img id="meme-image" src="#" alt="" />
+      </section>
+      <section class="options">
+        <button id="fire">fire</button>
+        <button id="water">water</button>
+        <button id="earth">earth</button>
+      </section>
+      <section class="memes-container">
+        <div id="meme-1" class="meme">
+          <p id="meme-text">#FarofaSupremacy</p>
+          <img id="meme-image" src="imgs/meme1.png" alt="" />
+        </div>
+        <div id="meme-2" class="meme">
+          <p id="meme-text">#MarioComunista</p>
+          <img id="meme-image" src="imgs/meme2.png" alt="" />
+        </div>
+        <div id="meme-3" class="meme">
+          <p id="meme-text">#Friday</p>
+          <img id="meme-image" src="imgs/meme3.png" alt="" />
+        </div>
+        <div id="meme-4" class="meme">
+          <p id="meme-text">#Tutu</p>
+          <img id="meme-image" src="imgs/meme4.png" alt="" />
+        </div>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

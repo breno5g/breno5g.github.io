@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+  user-select: none;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: tan;
+}
+
+.to-do-list {
+  width: 600px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+/* Header */
+.to-do-list header h1 {
+  margin-bottom: 10px;
+}
+
+.to-do-list header p {
+  color: black;
+  opacity: 60%;
+  margin-bottom: 10px;
+}
+
+/* Input Container */
+.to-do-list .input-container {
+  padding: 10px 0;
+}
+
+input {
+  margin-right: 10px;
+  height: 35px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  padding: 0 10px;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background-color: darkturquoise;
+  text-shadow: 1px 1px black;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+button:last-child {
+  background-color: palevioletred;
+}
+
+button:hover {
+  filter: brightness(80%);
+}
+
+/* Lista de tarefas */
+.to-do-list #lista-tarefas {
+  padding: 0 20px;
+}
+
+.to-do-list #lista-tarefas li {
+  cursor: pointer;
+}
+
+.to-do-list ol .selected {
+  background-color: gray;
+}
+
+.to-do-list ol .completed {
+  text-decoration: line-through;
+}
+
+.to-do-list .options {
+  margin-top: 20px;
+}
+
+.to-do-list .options button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  text-shadow: 1px 1px black;
+  background-color: salmon;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.to-do-list .options button:last-child {
+  background-color: pink;
+}
+
+.to-do-list .options button:hover {
+  filter: brightness(80%);
+}

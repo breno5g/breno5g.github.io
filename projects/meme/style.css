@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: beige;
+}
+
+.meme-generator {
+  width: 500px;
+  height: 700px;
+  background-color: whitesmoke;
+  border-radius: 25px;
+  box-shadow: 0 0 20px 3px lightgray;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.meme-generator #meme-image-container {
+  width: 100%;
+  height: 350px;
+  background-color: white;
+  display: flex;
+  padding: 20px;
+  align-items: flex-end;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid black;
+}
+
+.meme-generator #meme-image-container #meme-text {
+  font-size: 30px;
+  color: white;
+  text-shadow: 5px 5px 5px black;
+  font-weight: 600;
+  z-index: 10;
+}
+
+.meme-generator #meme-image-container img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.meme-generator .memes-container {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.meme-generator .memes-container .meme {
+  width: 100px;
+  height: 100px;
+  background-color: tomato;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-top: 10px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  cursor: pointer;
+}
+
+.meme-generator .memes-container .meme p {
+  position: absolute;
+  bottom: 5px;
+  z-index: 10;
+  color: white;
+  font-size: 10px;
+  width: 30px;
+  text-shadow: 2px 2px black;
+}
+
+.meme-generator .memes-container #meme-1 img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.meme-generator .memes-container #meme-2 img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.meme-generator .memes-container #meme-3 img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.meme-generator .memes-container #meme-4 img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#fire {
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  font-weight: 800;
+}
+
+#water {
+  background-color: blue;
+  color: white;
+  padding: 5px 10px;
+  font-weight: 800;
+}
+
+#earth {
+  background-color: green;
+  color: white;
+  padding: 5px 10px;
+  font-weight: 800;
+}
