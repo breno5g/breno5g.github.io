@@ -1,0 +1,121 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: beige;
+}
+
+main {
+  background-color: white;
+  padding: 50px 30px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px #8a888850;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  position: relative;
+}
+
+main header {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+main header input {
+  width: 430px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: whitesmoke;
+  box-shadow: 2px 2px #00000070;
+}
+
+main header button {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #7be77b;
+  font-size: 16px;
+  font-weight: 800;
+  color: whitesmoke;
+  text-shadow: 2px 2px black;
+  cursor: pointer;
+  box-shadow: 2px 2px #00000070;
+  transition: 0.3s ease;
+}
+
+main header button:hover {
+  filter: brightness(90%);
+}
+
+span {
+  display: inline-block;
+}
+
+.newspaper {
+  background-color: antiquewhite;
+  font-family: Times New Roman, sans-serif;
+  font-weight: 700;
+}
+
+.magazine1 {
+  background-color: teal;
+  color: white;
+  font-family: Verdana, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.magazine2 {
+  background-image: url('images/pink-pattern.png');
+  color: fuchsia;
+  font-family: Verdana, sans-serif;
+  font-weight: 900;
+}
+
+.medium {
+  font-size: 20px;
+  padding: 8px;
+}
+
+.big {
+  font-size: 30px;
+  padding: 10px;
+}
+
+.reallybig {
+  font-size: 40px;
+  padding: 15px;
+}
+
+.rotateleft {
+  transform: rotate(-5deg);
+}
+
+.rotateright {
+  transform: rotate(5deg);
+}
+
+.skewleft {
+  transform: skewX(10deg);
+}
+
+.skewright {
+  transform: skewX(-10deg);
+}
+
+#carta-contador {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-family: sans-serif;
+}

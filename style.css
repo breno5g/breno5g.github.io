@@ -480,14 +480,15 @@ body {
 }
 
 #projects .cards {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template: 1fr 1fr / repeat(4, 1fr);
+  gap: 50px;
 }
 
 #projects .cards .card {
   padding: 20px;
   width: 250px;
-  height: 400px;
+  height: 250px;
   background-color: tomato;
   display: flex;
   justify-content: center;
@@ -516,7 +517,17 @@ body {
   background-position: center;
 }
 #projects .cards .card:nth-child(4) {
+  background: url(./assets/mufasa.png);
+  background-size: cover;
+  background-position: center;
+}
+#projects .cards .card:nth-child(5) {
   background: url(./assets/mistery.png);
+  background-size: cover;
+  background-position: center;
+}
+#projects .cards .card:nth-child(6) {
+  background: url(./assets/playground.png);
   background-size: cover;
   background-position: center;
 }

@@ -10,3 +10,6 @@ document.querySelector('.colors').addEventListener('click', (e) => {
 document.querySelector('.meme').addEventListener('click', (e) => {
   window.open('./projects/meme');
 });
+document.querySelector('.letter').addEventListener('click', (e) => {
+  window.open('./projects/letter');
+});
