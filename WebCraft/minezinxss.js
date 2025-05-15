@@ -3,7 +3,7 @@ function inject() {
   document.title = "MINEZIN da GARELA > DOM";
 
   document.getElementsByTagName("body")[0].innerHTML =
-    '<iframe src="https://breno5g.github.io/WebCraft/singleplayer.html"></iframe>';
+    '<iframe src="https://breno5g.github.io/WebCraft/singleplayer.html" style="position: absolute; width: 100%; height: 100%; border: none;"></iframe>';
 }
 
 if (
